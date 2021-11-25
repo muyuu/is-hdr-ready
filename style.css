@@ -1,0 +1,36 @@
+li {
+    margin: .4rem 0;
+}
+select {
+    padding: .2rem;
+}
+table {
+    width: 100%;
+    max-width: 1800px;
+    border-collapse: collapse;
+}
+table td, table th {
+    border: 1px solid #ccc;
+    padding: .2rem;
+}
+table thead th {
+    text-align: center;
+    font-weight: bolder;
+}
+
+table td:nth-child(1),
+table td:nth-child(5),
+table td:nth-child(6),
+table td:nth-child(7) {
+    text-align: left;
+}
+table td:nth-child(2),
+table td:nth-child(3),
+table td:nth-child(4) {
+    text-align: right;
+}
+table td:nth-child(8),
+table td:nth-child(9),
+table td:nth-child(10) {
+    text-align: center;
+}
