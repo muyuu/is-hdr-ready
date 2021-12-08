@@ -44,8 +44,19 @@ td > a:visited {
     color: #000;
 }
 
+.codecTable thead th {
+    position: sticky;
+    top: 90px;
+    background-color: #930f0f;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
 .filter {
-    margin: 2rem 0;
     display: flex;
     column-gap: 2rem;
+    position: sticky;
+    top: 0;
+    padding: 2rem 0;
+    background-color: #fff;
 }
