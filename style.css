@@ -4,9 +4,14 @@ li {
 select {
     padding: .2rem;
 }
-table {
+
+.wrapper {
     width: 100%;
     max-width: 1800px;
+    margin: auto;
+}
+table {
+    width: 100%;
     border-collapse: collapse;
 }
 table td, table th {
@@ -18,19 +23,29 @@ table thead th {
     font-weight: bolder;
 }
 
-table td:nth-child(1),
-table td:nth-child(5),
-table td:nth-child(6),
-table td:nth-child(7) {
-    text-align: left;
-}
-table td:nth-child(2),
-table td:nth-child(3),
-table td:nth-child(4) {
-    text-align: right;
-}
-table td:nth-child(8),
-table td:nth-child(9),
-table td:nth-child(10) {
+td.tac {
     text-align: center;
+}
+td.success {
+    background: green;
+    color: white;
+}
+td.fail {
+    background: red;
+    color: white;
+}
+td.warn {
+    background: rgb(215, 232, 36);
+    color: white;
+}
+td > a,
+td > a:hover,
+td > a:visited {
+    color: #000;
+}
+
+.filter {
+    margin: 2rem 0;
+    display: flex;
+    column-gap: 2rem;
 }
