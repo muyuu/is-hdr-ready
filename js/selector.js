@@ -39,12 +39,15 @@ export function onlySupportedKeySystem(pageType, requestMediaKeySystemAccess) {
     return pageType === 'onlySupportedKeySystem' && requestMediaKeySystemAccess === false;
 }
 
-export function lessThanLevel(levelParam, level) {
-    const result = (levelParam <= 5 && level >= 6) ||
+export function onlyLevel(levelParam, level) {
+    if (levelParam === null) return true;
+    const result = levelParam <= level && level < levelParam + 1;
+    return result;
+    const result1 = (levelParam <= 5 && level >= 6) ||
     (levelParam <= 4 && level >= 5) ||
     (levelParam <= 3 && level >= 4) ||
     (levelParam <= 2 && level >= 3) ||
     (levelParam <= 1 && level >= 2);
-    return result;
+    return result1;
 }
 

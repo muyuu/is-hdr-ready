@@ -60,3 +60,6 @@ td > a:visited {
     padding: 2rem 0;
     background-color: #fff;
 }
+.filter__label {
+    font-weight: bold;
+}
