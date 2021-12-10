@@ -69,12 +69,13 @@ export async function check({
     bitrate = 10000,
     framerate = 30,
 }) {
-    const type = `video/${container};codecs="${codecStr}"`;
+    const contentType = `video/${container};codecs="${codecStr}"`;
+    const robustness = isSafari ? "" : "SW_SECURE_CRYPTO";
     const mediaKeySystemAccessConfigurations = [{
-        "initDataTypes": ["cenc"],
-        "videoCapabilities": [{
-            "robustness": "SW_SECURE_CRYPTO",
-            "contentType": type,
+        initDataTypes: ["cenc"],
+        videoCapabilities: [{
+            robustness,
+            contentType,
         }],
     }];
 
@@ -88,7 +89,7 @@ export async function check({
     const videoDecodingConfiguration = {
         type: 'media-source',
         video: {
-            contentType: type,
+            contentType,
             width,
             height,
             bitrate,
@@ -99,7 +100,7 @@ export async function check({
         .decodingInfo(videoDecodingConfiguration)
         .then((v) => ({ supported: v.supported, powerEfficient: v.powerEfficient, smooth: v.smooth }));
 
-    return { type, ...decodingInfo, requestMediaKeySystemAccess };
+    return { type: contentType, ...decodingInfo, requestMediaKeySystemAccess };
 }
 
 function getKeySystemString() {
