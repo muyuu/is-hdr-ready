@@ -22,6 +22,14 @@ function main() {
     ];
     selector(pairs);
     put();
+    resetRegister();
+}
+
+function resetRegister() {
+    const b = document.getElementById('resetBtn');
+    b.addEventListener('click', () => {
+        location.href = './codec.html';
+    });
 }
 
 async function put() {
