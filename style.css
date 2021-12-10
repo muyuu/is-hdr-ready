@@ -11,17 +11,18 @@ select {
 
 .wrapper {
     width: calc(100% - 40px);
-    max-width: 1800px;
-    padding: 0 20px 20px;
+    max-width: 1400px;
+    padding: 0 20px;
     margin: auto;
 }
 
 .title {
     height: 50px;
-    padding: 20px 0 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background-color: #4a2222;
+    color: #fff;
     text-align: center;
 }
 .title h1 {
@@ -74,13 +75,16 @@ td > a:visited {
 }
 
 .filter {
-    display: flex;
-    column-gap: 2rem;
     position: sticky;
     top: 70px;
     height: 60px;
     padding: 20px 0 0 0;
     background-color: #fff;
+}
+
+.filter__body {
+    display: flex;
+    column-gap: 2rem;
 }
 .filter__label {
     font-weight: bold;
