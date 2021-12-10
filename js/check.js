@@ -73,7 +73,7 @@ export async function check({
     const mediaKeySystemAccessConfigurations = [{
         "initDataTypes": ["cenc"],
         "videoCapabilities": [{
-            // "robustness": "SW_SECURE_CRYPTO",
+            "robustness": "SW_SECURE_CRYPTO",
             "contentType": type,
         }],
     }];
