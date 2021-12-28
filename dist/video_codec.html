@@ -1,0 +1,100 @@
+<title>let me watch</title>
+<script src="./js/video_codec.js" type="module"></script>
+<link rel="stylesheet" href="./css/style.css">
+
+<div class="title">
+    <div class="wrapper">
+        <h1>let me watch</h1>
+    </div>
+</div>
+<div class="filter">
+    <div class="wrapper">
+        <div class="filter__body">
+            <label for="reset" class="filter__item">
+                <div class="filter__label">reset</div>
+                <button id="resetBtn">reset</button>
+            </label>
+            <label for="containerFilter" class="filter__item">
+                <div class="filter__label">container</div>
+                <select name="containerFilter" id="containerFilter">
+                    <option value="mp4" selected>mp4</option>
+                    <option value="webm">webm</option>
+                </select>
+            </label>
+            <label for="codecFilter" class="filter__item">
+                <div class="filter__label">codec</div>
+                <select name="codecFilter" id="codecFilter">
+                    <option value="avc" selected>avc</option>
+                    <option value="vp9">vp9</option>
+                    <option value="av1">av1</option>
+                </select>
+            </label>
+            <label for="framerateFilter" class="filter__item">
+                <div class="filter__label">framerate</div>
+                <select name="framerateFilter" id="framerateFilter">
+                    <option value="30" selected>30</option>
+                    <option value="60">60</option>
+                    <option value="120">120</option>
+                </select>
+            </label>
+            <label for="resolutionFilter" class="filter__item">
+                <div class="filter__label">resolution</div>
+                <select name="resolutionFilter" id="resolutionFilter">
+                    <option value="480">480</option>
+                    <option value="720">720</option>
+                    <option value="1080" selected>1080</option>
+                    <option value="4320">4320</option>
+                </select>
+            </label>
+            <label for="bitrateFilter" class="filter__item">
+                <div class="filter__label">bitrate</div>
+                <select name="bitrateFilter" id="bitrateFilter">
+                    <option value="40000">40000</option>
+                    <option value="75000">75000</option>
+                    <option value="120000" selected>120000</option>
+                    <option value="600000">600000</option>
+                </select>
+            </label>
+            <label for="supportedFilter" class="filter__item">
+                <div class="filter__label">supported</div>
+                <select name="supportedFilter" id="supportedFilter">
+                    <option value="">-</option>
+                    <option value="onlySupported">only supported</option>
+                    <option value="onlySupportedKeySystem">only supported key system</option>
+                </select>
+            </label>
+            <label for="levelFilter" class="filter__item">
+                <div class="filter__label">level</div>
+                <select name="levelFilter" id="levelFilter">
+                    <option value="">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </label>
+            <div class="length">
+                <div class="filter__label">result</div>
+                <div id="howMany"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <table class="codecTable">
+        <thead>
+            <tr>
+                <th>description</th>
+                <th>MIME Type</th>
+                <th>supported</th>
+                <th>smooth</th>
+                <th>power<br />efficient</th>
+                <th>key system<br />access</th>
+            </tr>
+        </thead>
+        <tbody id="result"></tbody>
+    </table>
+</div>
